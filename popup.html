@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { 
+      width: 320px; 
+      padding: 15px; 
+      font-family: sans-serif; 
+      background: #1a1a1a; 
+      color: white; 
+    }
+    h3 {
+      margin: 0 0 15px 0;
+      color: #4CAF50;
+      font-size: 18px;
+    }
+    .info-box {
+      background: #2a2a2a;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #444;
+      margin-bottom: 15px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .info-box strong { color: #4CAF50; }
+    .timer-control {
+      background: #2a2a2a;
+      padding: 12px;
+      border-radius: 4px;
+      border: 1px solid #444;
+      margin-bottom: 15px;
+    }
+    .timer-control label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #ffd700;
+    }
+    .timer-input {
+      width: 100%;
+      padding: 8px;
+      background: #333;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 3px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .timer-input:focus { outline: none; border-color: #4CAF50; }
+    .speed-buttons {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .speed-btn {
+      flex: 1;
+      padding: 6px 4px;
+      background: #333;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: bold;
+      transition: all 0.2s;
+      margin-bottom: 0;
+      width: auto;
+    }
+    .speed-btn:hover { background: #4CAF50; border-color: #4CAF50; }
+    button#startBtn { 
+      width: 100%; 
+      padding: 14px; 
+      background: #4CAF50; 
+      color: white; 
+      border: none; 
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-weight: bold;
+      font-size: 15px;
+      transition: background 0.3s;
+      margin-bottom: 10px;
+    }
+    button#startBtn:hover { background: #45a049; }
+    button#startBtn:active { background: #3d8b40; }
+    #status { 
+      padding: 10px;
+      background: #2a2a2a;
+      border-radius: 4px;
+      font-size: 12px; 
+      color: #ffd700; 
+      text-align: center;
+      border: 1px solid #444;
+    }
+    .hint {
+      font-size: 11px;
+      color: #888;
+      margin-top: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h3>🚀 Auto Quiz Solver</h3>
+  
+  <div class="info-box">
+    <strong>How it works:</strong><br>
+    1. Open the quiz page<br>
+    2. Click "START AUTO-SOLVE"<br>
+    3. Extension extracts answers from API<br>
+    4. Auto-completes all 20 questions<br>
+    5. Timer speeds up automatically
+  </div>
+  
+  <div class="timer-control">
+    <label for="speedInput">⚡ Timer Speed After Completion:</label>
+    <input type="number" class="timer-input" id="speedInput" value="1000" min="1" max="99999">
+    <div class="speed-buttons">
+      <button class="speed-btn" onclick="setSpeed(100)">100x</button>
+      <button class="speed-btn" onclick="setSpeed(500)">500x</button>
+      <button class="speed-btn" onclick="setSpeed(1000)">1000x</button>
+      <button class="speed-btn" onclick="setSpeed(9999)">MAX</button>
+    </div>
+    <div class="hint">Higher = faster timer drain</div>
+  </div>
+  
+  <button id="startBtn">▶ START AUTO-SOLVE</button>
+  
+  <div id="status">Status: Ready to start</div>
+  
+  <script src="popup.obf.js"></script>
+  <script>
+    function setSpeed(v) {
+      document.getElementById('speedInput').value = v;
+    }
+  </script>
+  <div style="
+  text-align:center;
+  font-size:10px;
+  color:#666;
+  margin-top:10px;
+">
+  © 2026 ChronoSolver. All rights reserved.
+</div>
+
+</body>
+</html>
