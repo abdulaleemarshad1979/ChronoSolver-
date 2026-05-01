@@ -16,7 +16,7 @@ Custom popup UI
 
 Obfuscated production scripts for protection
 
-Clone or download this repository.
+
 
 Open Chrome and go to:
 
