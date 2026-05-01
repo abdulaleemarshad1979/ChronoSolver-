@@ -31,17 +31,6 @@ Select the project folder.
 
 The extension will now be installed locally.
 
-🔐 Permissions
-
-The extension may request permissions such as:
-
-activeTab
-
-scripting
-
-tabs
-
-Host permissions for target websites
 
 These are required for injecting and executing automation scripts.
 
