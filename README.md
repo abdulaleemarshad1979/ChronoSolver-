@@ -36,8 +36,9 @@ These are required for injecting and executing automation scripts.
 
 📦 Version
 
-Current Version: 4.0
-Manifest Version: 3
+Current Version: 5.0
+Manifest Version: 4.1
+
 
 ⚠ Disclaimer
 
